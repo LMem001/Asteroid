@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd3jtsr7scxgm"]
+
+[ext_resource type="PackedScene" uid="uid://bvwejscqp4nnh" path="res://src/scenes/player.tscn" id="1_lyfa0"]
+
+[node name="Asteroid" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_lyfa0")]
+position = Vector2(688, 522)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.999
+offset_bottom = -0.100037
+color = Color(0, 0, 0, 1)

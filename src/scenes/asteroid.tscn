@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bd3jtsr7scxgm"]
+[gd_scene load_steps=4 format=3 uid="uid://bd3jtsr7scxgm"]
 
 [ext_resource type="PackedScene" uid="uid://bvwejscqp4nnh" path="res://src/scenes/player.tscn" id="1_lyfa0"]
-[ext_resource type="Script" path="res://src/scenes/asteroid.gd" id="1_v1xsf"]
+[ext_resource type="Script" path="res://src/scripts/asteroid.gd" id="1_v1xsf"]
+[ext_resource type="PackedScene" uid="uid://qsvg2874ena8" path="res://src/scenes/rock_big.tscn" id="3_ooq6n"]
 
 [node name="Asteroid" type="Node2D" node_paths=PackedStringArray("canvas_layer", "player")]
 script = ExtResource("1_v1xsf")
@@ -22,3 +23,6 @@ offset_left = -3.0
 offset_right = -3.0
 offset_bottom = -0.100037
 color = Color(0, 0, 0, 1)
+
+[node name="Rock_Big" parent="." instance=ExtResource("3_ooq6n")]
+position = Vector2(1241, 464)

@@ -6,6 +6,10 @@ var canvas_size : Vector2
 func _physics_process(delta):
 	# wrap player when exits from canvas layer
 	_wrap_around(player)
+	
+	for rock in get_tree().get_nodes_in_group("gRock"):
+		#rock._change_direction()
+		_wrap_around(rock)
 
 func _ready():
 	# Ottieni la dimensione del CanvasLayer

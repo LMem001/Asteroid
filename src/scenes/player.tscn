@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvwejscqp4nnh"]
 
-[ext_resource type="Texture2D" uid="uid://d1tfh8np2troa" path="res://assets/spaceship.png" id="1_bx873"]
+[ext_resource type="Texture2D" uid="uid://d1tfh8np2troa" path="res://assets/images/spaceship.png" id="1_bx873"]
 [ext_resource type="Script" path="res://src/scripts/player.gd" id="1_oegcm"]
 
 [node name="Player" type="CharacterBody2D"]

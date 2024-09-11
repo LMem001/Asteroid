@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bd3jtsr7scxgm"]
+[gd_scene load_steps=3 format=3 uid="uid://bd3jtsr7scxgm"]
 
 [ext_resource type="PackedScene" uid="uid://bvwejscqp4nnh" path="res://src/scenes/player.tscn" id="1_lyfa0"]
+[ext_resource type="Script" path="res://src/scenes/asteroid.gd" id="1_v1xsf"]
 
-[node name="Asteroid" type="Node2D"]
+[node name="Asteroid" type="Node2D" node_paths=PackedStringArray("canvas_layer", "player")]
+script = ExtResource("1_v1xsf")
+canvas_layer = NodePath("CanvasLayer")
+player = NodePath("Player")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_lyfa0")]
+[node name="Player" parent="." instance=ExtResource("1_lyfa0")]
 position = Vector2(688, 522)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -14,5 +18,7 @@ layer = -10
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.999
+offset_left = -3.0
+offset_right = -3.0
 offset_bottom = -0.100037
 color = Color(0, 0, 0, 1)

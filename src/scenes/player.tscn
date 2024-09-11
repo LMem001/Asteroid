@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d1tfh8np2troa" path="res://assets/spaceship.png" id="1_bx873"]
 [ext_resource type="Script" path="res://src/scripts/player.gd" id="1_oegcm"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_oegcm")
 
@@ -12,3 +12,12 @@ texture = ExtResource("1_bx873")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-32, -30, -24, -30, 32, -2, 32, 2, -24, 30, -32, 30, -32, 18, -28, 10, -24, 6, -24, -3, -32, -18)
+
+[node name="ShootingPoint" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(48, 0)
+
+[node name="ShotTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

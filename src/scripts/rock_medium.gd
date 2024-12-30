@@ -2,4 +2,3 @@ extends "res://src/scripts/rock.gd"
 
 func _take_damage():
 	queue_free()
-	spawn_smaller_rocks(load("res://src/scenes/rock_medium.tscn"), 2)

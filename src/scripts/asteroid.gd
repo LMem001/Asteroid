@@ -9,7 +9,10 @@ func _physics_process(delta):
 	
 	for rock in get_tree().get_nodes_in_group("gRock"):
 		#rock._change_direction()
-		_wrap_around(rock)
+		var velocity = rock.linear_velocity
+		rock.position.x = wrapf(rock.position.x, 0, canvas_size.x)
+		rock.position.y = wrapf(rock.position.y, 0, canvas_size.y)
+		rock.linear_velocity = velocity
 
 func _ready():
 	# Ottieni la dimensione del CanvasLayer
